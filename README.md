@@ -1,0 +1,1 @@
+# aws-lambda-layers-generator-docker
