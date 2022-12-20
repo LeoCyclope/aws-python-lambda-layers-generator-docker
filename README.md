@@ -15,7 +15,7 @@ You must have Docker Installed. You can get Docker following this link: [Get Doc
 
 By default the python version installed in the docker image is **3.7.12**, but you can change it using the Docker Arg **python_version**
 
-In the following example, the python 3.8.0 is used.
+In the following example, the python 3.7.12 is used.
 (Available python versions can be seen at [Python Versions](https://www.python.org/ftp/python/))
 ```
 git clone https://github.com/LeoCyclope/aws-python-lambda-layers-generator-docker.git
