@@ -20,7 +20,7 @@ In the following example, the python 3.8.0 is used.
 ```
 git clone https://github.com/LeoCyclope/aws-python-lambda-layers-generator-docker.git
 cd aws-python-lambda-layers-generator-docker
-docker build --build-arg python_version=3.8.0 . -t aws-gen 
+docker build --build-arg python_version=3.7.12 . -t aws-gen 
 ```
 
 # How to Customize
