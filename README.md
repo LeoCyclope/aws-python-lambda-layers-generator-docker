@@ -1,6 +1,6 @@
-# aws-lambda-layers-generator-docker
+# Python Layer Generator for Lambda Aws using Docker
 
-This repos allows you to generate python Layers for [lambda in AWS](https://aws.amazon.com/lambda/).
+This repos allows you to generate **python** Layers for [lambda in AWS](https://aws.amazon.com/lambda/).
 
 Lambda is an amazing AWS Service allowing you to develop serverless functions.
 
