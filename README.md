@@ -18,8 +18,8 @@ By default the python version installed in the docker image is **3.7.12**, but y
 In the following example, the python 3.8.0 is used.
 (Available python versions can be seen at [Python Versions](https://www.python.org/ftp/python/))
 ```
-git clone https://github.com/LeoCyclope/aws-lambda-layers-generator-docker.git
-cd aws-lambda-layers-generator-docker
+git clone https://github.com/LeoCyclope/aws-python-lambda-layers-generator-docker.git
+cd aws-python-lambda-layers-generator-docker
 docker build --build-arg python_version=3.8.0 . -t aws-gen 
 ```
 
