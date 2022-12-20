@@ -26,8 +26,11 @@ docker build --build-arg python_version=3.8.0 . -t aws-gen
 # How to Customize
 
 - **Update the requirements.txt with the libraries you want your layer to contain.**
+    - By the default the current requirements.txt will install *Opencv* and *Pillow*.
 - Change the python version according to the runtime used in lambda:
-    - You can change the **python_version** ARGS when building you docker file to match the runtime. 
+    - You can change the **python_version docker ARG** when building you Dockerfile to match the runtime. 
+- When Executing, change python lib folder to match the runtime you chose in Lambda AWS.
+    - Ex: python/lib/python**3.7**/site-packages/ should be changed to python/lib/python**3.8**/site-packages/ if you chose the runtime 3.8
 
 
 # How to Execute
@@ -35,11 +38,17 @@ docker build --build-arg python_version=3.8.0 . -t aws-gen
 ## On Windows
 
 ```
-docker run --rm -v ${PWD}:/workdir aws-gen /bin/bash -c "mkdir layer && cd layer && pip3.7 install -r /workdir/requirements.txt -t python/lib/python3.7/site-packages/ && zip -r layer.zip * && cp layer.zip /workdir"
+docker run --rm -v ${PWD}:/workdir aws-gen /bin/bash -c "mkdir layer && cd layer && pip install -r /workdir/requirements.txt -t python/lib/python3.7/site-packages/ && zip -r layer.zip * && cp layer.zip /workdir"
 ```
+
+*(Change the export path to match the runtime version you chose : python/lib/python**3.7**/site-packages/)*
+
 
 ## On Linux
 
 ```
-docker run --rm -v $pwd:/workdir aws-gen /bin/bash -c "mkdir layer && cd layer && pip3.7 install -r /workdir/requirements.txt -t python/lib/python3.7/site-packages/ && zip -r layer.zip * && cp layer.zip /workdir"
+docker run --rm -v $pwd:/workdir aws-gen /bin/bash -c "mkdir layer && cd layer && pip
+ install -r /workdir/requirements.txt -t python/lib/python3.7/site-packages/ && zip -r layer.zip * && cp layer.zip /workdir"
 ```
+
+*(Change the export path to match the runtime version you chose : python/lib/python**3.7**/site-packages/)*
