@@ -15,7 +15,7 @@ You must have Docker Installed. You can get Docker following this link: [Get Doc
 
 By default the python version installed in the docker image is **3.7.12**, but you can change it using the Docker Arg **python_version**
 
-In the following example, the python 3.8.0 is used.
+In the following example, the *python 3.7.12* is used.
 (Available python versions can be seen at [Python Versions](https://www.python.org/ftp/python/))
 ```
 git clone https://github.com/LeoCyclope/aws-python-lambda-layers-generator-docker.git
@@ -47,8 +47,7 @@ docker run --rm -v ${PWD}:/workdir aws-gen /bin/bash -c "mkdir layer && cd layer
 ## On Linux
 
 ```
-docker run --rm -v $pwd:/workdir aws-gen /bin/bash -c "mkdir layer && cd layer && pip
- install -r /workdir/requirements.txt -t python/lib/python3.7/site-packages/ && zip -r layer.zip * && cp layer.zip /workdir"
+docker run --rm -v $pwd:/workdir aws-gen /bin/bash -c "mkdir layer && cd layer && pip install -r /workdir/requirements.txt -t python/lib/python3.7/site-packages/ && zip -r layer.zip * && cp layer.zip /workdir"
 ```
 
 *(Change the export path to match the runtime version you chose : python/lib/python**3.7**/site-packages/)*
