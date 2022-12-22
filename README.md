@@ -4,6 +4,8 @@ This repos allows you to generate **python** Layers for [lambda in AWS](https://
 
 Lambda is an amazing AWS Service allowing you to develop serverless functions.
 
+There is a full detailed tutorial on medium on how to use this repo: [Link to Medium Tutorial](link to it)
+
 # Pre-Requisites
 
 You must have Docker Installed. You can get Docker following this link: [Get Docker](https://docs.docker.com/get-docker/)
@@ -55,11 +57,14 @@ docker run --rm -v $pwd:/workdir aws-lambda-layer-generator /bin/bash -c "mkdir 
 
 ## Output
 
-The output of the command lines above will me a .zip called "layer.zip" which will is the file required to build your layer.
+The output of the command lines above will me a .zip called **"layer.zip"** which will is the file required to build your layer.
+
+![plot](./img/layer_output_zip.png)
+
 
 # How to create the layer.
 
-There is a full detailed tutorial on medium on how to use this repo: [Link to Medium Tutorial](link to it)
+There is a full detailed tutorial on medium on how to use this repo: [Link to Medium Tutorial](https://medium.com/@souquet.leo/how-to-integrate-external-custom-python-libraries-in-aws-lambda-using-layer-and-a-layer-generator-b0981bf338fb)
 
 # Sources
 
