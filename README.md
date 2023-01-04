@@ -50,7 +50,7 @@ docker run --rm -v ${PWD}:/workdir aws-lambda-layer-generator /bin/bash -c "mkdi
 ## On Linux
 
 ```
-docker run --rm -v $pwd:/workdir aws-lambda-layer-generator /bin/bash -c "mkdir layer && cd layer && pip install -r /workdir/requirements.txt -t python/lib/python3.7/site-packages/ && zip -r layer.zip * && cp layer.zip /workdir"
+docker run --rm -v $PWD:/workdir aws-lambda-layer-generator /bin/bash -c "mkdir layer && cd layer && pip install -r /workdir/requirements.txt -t python/lib/python3.7/site-packages/ && zip -r layer.zip * && cp layer.zip /workdir"
 ```
 
 *(Change the export path to match the runtime version you chose : python/lib/python**3.7**/site-packages/)*
